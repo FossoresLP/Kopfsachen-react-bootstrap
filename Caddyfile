@@ -1,0 +1,26 @@
+http://, mindtastic.lol {
+	handle_path /api/* {
+		reverse_proxy /wiki {
+			to https://wiki.api.dev.mindtastic.lol
+			header_up Host wiki.api.dev.mindtastic.lol
+		}
+		reverse_proxy /self-service/* {
+			to https://auth.api.dev.mindtastic.lol
+			header_up Host auth.api.dev.mindtastic.lol
+		}
+		reverse_proxy /sessions/* {
+			to https://auth.api.dev.mindtastic.lol
+			header_up Host auth.api.dev.mindtastic.lol
+		}
+		reverse_proxy /user {
+			to https://users.api.dev.mindtastic.lol
+			header_up Host users.api.dev.mindtastic.lol
+		}
+	}
+	handle {
+		root * ./build
+		try_files {path} /index.html
+		file_server
+	}
+	tls internal
+}

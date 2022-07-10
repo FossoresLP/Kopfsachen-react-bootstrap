@@ -1,12 +1,12 @@
 //const baseUrl = "https://auth.api.live.mindtastic.lol";
 import MD5 from "crypto-js/md5"
-const baseUrl = "";
+const baseUrl = "/api";
 const apiCalls = {
 
     baseUrl: baseUrl,
 
     initRegistration: async() => {
-        return _fetchGET(baseUrl + '/self-service/registration/browser', true)
+        return _fetchGET('/self-service/registration/browser', true)
     },
 
     submitRegistration: async(re) => {
@@ -18,7 +18,7 @@ const apiCalls = {
     },
 
     initLogin: async() => {
-        return _fetchGET(baseUrl + '/self-service/login/browser', true)
+        return _fetchGET('/self-service/login/browser', true)
     },
 
     submitLogin: async(re, key) => {
@@ -31,23 +31,23 @@ const apiCalls = {
     },
 
     initLogout: async() => {
-        return _fetchGET(baseUrl + '/self-service/logout/browser', true)
+        return _fetchGET('/self-service/logout/browser', true)
     },
 
     submitLogout: async(token) => {
-        return _fetchGET(baseUrl + '/self-service/logout?token=' + token, false)
+        return _fetchGET('/self-service/logout?token=' + token, false)
     },
 
     checkSession: async() => {
-        return _fetchGET(baseUrl + '/sessions/whoami', true)
+        return _fetchGET('/sessions/whoami', true)
     },
 
     getWiki: async() => {
-        return _fetchGET(baseUrl + '/wiki', true)
+        return _fetchGET('/wiki', true)
     },
 
     getUser: async(sessionToken) => {
-        return _fetchGETWithAuthorization(baseUrl + '/user', true, sessionToken)
+        return _fetchGETWithAuthorization('/user', true, sessionToken)
     },
 
     getSafetyNet: async(sessionToken) => {
