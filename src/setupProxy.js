@@ -2,28 +2,28 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
 
-    app.use("/self-service",
+    app.use("/api/self-service",
         createProxyMiddleware({
             target: 'https://auth.api.live.mindtastic.lol',
             changeOrigin: true,
         })
     );
 
-    app.use("/sessions",
+    app.use("/api/sessions",
         createProxyMiddleware({
             target: 'https://auth.api.live.mindtastic.lol',
             changeOrigin: true,
         })
     );
 
-    app.use("/wiki",
+    app.use("/api/wiki",
         createProxyMiddleware({
             target: 'https://wiki.api.live.mindtastic.lol',
             changeOrigin: true,
         })
     );
 
-    app.use("/user",
+    app.use("/api/user",
         createProxyMiddleware({
             target: 'https://users.api.live.mindtastic.lol',
             changeOrigin: true,
