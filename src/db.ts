@@ -1,4 +1,4 @@
-import Dexie from 'dexie';
+import Dexie from "dexie";
 
 export class CacheDatabase extends Dexie {
 	wiki!: Dexie.Table<IWikiEntry, string>;
@@ -14,56 +14,54 @@ export class CacheDatabase extends Dexie {
 			diary: "id, mood_day",
 			safetyNet: "id, name",
 			motivators: "id, modified_at, name",
-			updated: "name"
+			updated: "name",
 		});
 	}
-
-	
 }
 
 export interface IUpdate {
-	name: string,
-	time: Date
+	name: string;
+	time: Date;
 }
 
 export interface IWikiEntry {
-	id: string
-	created_at: Date
-	updated_at: Date
-	title: string
-	content: string
+	id: string;
+	created_at: Date;
+	updated_at: Date;
+	title: string;
+	content: string;
 }
 
 export interface IDiaryEntry {
-	id: number
-	_delete: boolean
-	mood_day: string
-	mood_type: string
-	mood_descr: string
+	id: number;
+	_delete: boolean;
+	mood_day: string;
+	mood_type: string;
+	mood_descr: string;
 }
 
 export interface ISafetyNetItem {
-	id: number
-	_delete: boolean
-	name: string
-	type: string
-	strategies: string[]
-	feedback: ISafetyNetFeedback
+	id: number;
+	_delete: boolean;
+	name: string;
+	type: string;
+	strategies: string[];
+	feedback: ISafetyNetFeedback;
 }
 
 export interface ISafetyNetFeedback {
-	itHelped: boolean
-	comment: string
-	timestamp: string
+	itHelped: boolean;
+	comment: string;
+	timestamp: string;
 }
 
 export interface IMotivator {
-	id: number
-	name: string
-	headline: string
-	description: string
-	created_at: Date
-	modified_at: Date
-	content: object[]
-	inputs: object[]
+	id: number;
+	name: string;
+	headline: string;
+	description: string;
+	created_at: Date;
+	modified_at: Date;
+	content: object[];
+	inputs: object[];
 }

@@ -51,11 +51,11 @@ const apiCalls = {
     },
 
     getSafetyNet: async(sessionToken) => {
-        return _fetchGETWithAuthorization(baseUrl + '/safetyNet', true, sessionToken)
+        return _fetchGETWithAuthorization('/safetyNet', true, sessionToken)
     },
 
     postSafetyNet: async(sessionToken, name, type, strategies) => {
-        return _fetchPOSTWithAuthorization(baseUrl + '/safetyNet', {
+        return _fetchPOSTWithAuthorization('/safetyNet', {
             "name": name,
             "type": type,
             "strategies": strategies
