@@ -6,6 +6,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://auth.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -13,6 +14,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://auth.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -20,6 +22,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://wiki.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -27,6 +30,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://users.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -34,6 +38,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://motivator.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -41,6 +46,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://motivator.api.live.mindtastic.lol',
             changeOrigin: true,
+            pathRewrite: {'^/api' : ''},
         })
     );
 
@@ -48,6 +54,7 @@ module.exports = function(app) {
         createProxyMiddleware({
             target: 'https://motivator.api.live.mindtastic.lol',
             changeOrigin: true,
-            })
+            pathRewrite: {'^/api' : ''},
+        })
     );
 }

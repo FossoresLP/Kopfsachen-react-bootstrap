@@ -39,7 +39,6 @@ precacheAndRoute([
 	{ url: "favicon-transparent.png", revision: null },
 	{ url: "favicon.png", revision: null },
 	{ url: "frauLangeHaare.png", revision: null },
-	{ url: "index.html", revision: null },
 	{ url: "kreativ.png", revision: null },
 	{ url: "logo.png", revision: null },
 	{ url: "logoBig.png", revision: null },
