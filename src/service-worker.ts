@@ -1,6 +1,6 @@
 /// <reference lib="WebWorker" />
 
-import { CacheDatabase, IWikiEntry, ISafetyNetItem } from "./db";
+import { CacheDatabase, IWikiEntry, ISafetyNetItem } from "./db.ts";
 
 import { clientsClaim } from "workbox-core";
 import { ExpirationPlugin } from "workbox-expiration";
